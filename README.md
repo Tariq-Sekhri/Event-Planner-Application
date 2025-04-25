@@ -1,6 +1,6 @@
 # Event Planner Application
 
-An Angular-based event planner that allows users to manage upcoming, past, and all events. Built as a final project for [Course Name].
+An Angular-based event planner that allows users to manage upcoming, past, and all events. Built as a final project for SYST 24444 Mobile Web-Based Applic Develp.
 
 ## Features
 

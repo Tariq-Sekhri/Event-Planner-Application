@@ -1,0 +1,38 @@
+<button (click)="showPast()">show past</button>
+<button (click)="showFuture()">show future</button>
+<button (click)="getAllEvents()">reset</button>
+<br />
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Completion Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(event of events;track event){
+
+    <tr>
+      <td>{{ event.id }}</td>
+      <td>{{ event.name }}</td>
+      <td>{{ event.date | date }}</td>
+      <td>{{ event.location }}</td>
+      <td>{{ event.description }}</td>
+      <td>{{ event.completion_status }}</td>
+      <td>
+        <button (click)="editForm(event.id)">edit</button>
+        <button (click)="markCompleteById(event.id)">mark complete</button>
+        <button (click)="deleteEventById(event.id)">delete</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+<br />
+<button (click)="addEvent()">add event</button>

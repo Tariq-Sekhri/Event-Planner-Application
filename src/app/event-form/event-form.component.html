@@ -1,0 +1,60 @@
+<form [formGroup]="regForm" (ngSubmit)="addEvent()">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" placeholder="Enter name" formControlName="name" />
+    @if(regForm.get('name')?.invalid && regForm.get('name')?.touched){
+    <span class="error">name is required</span>
+    }
+  </div>
+  <div>
+    <label for="date">Date</label>
+    <input type="date" placeholder="Enter date" formControlName="date" />
+    @if(regForm.get('date')?.invalid && regForm.get('date')?.touched){
+    <span class="error">date is required</span>
+    }
+  </div>
+  <div>
+    <label for="location">Location</label>
+    <input
+      type="text"
+      placeholder="Enter location"
+      formControlName="location"
+    />
+    @if(regForm.get('location')?.invalid && regForm.get('location')?.touched){
+    <span class="error">location is required</span>
+    }
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <input
+      type="text"
+      placeholder="Enter description"
+      formControlName="description"
+    />
+    @if(regForm.get('description')?.invalid &&
+    regForm.get('description')?.touched){
+    <span class="error">description is required</span>
+    }
+  </div>
+  <label for="completion_status">Completion Status</label>
+  <div>
+    <input
+      type="radio"
+      formControlName="completion_status"
+      value="true"
+      name="completion_status"
+    />
+    <label for="true">True</label>
+    <input
+      type="radio"
+      name="completion_status"
+      formControlName="completion_status"
+      value="false"
+      checked
+    />
+    <label for="false">False</label>
+  </div>
+  @if(regForm.valid){ }
+  <button type="submit" [disabled]="regForm.invalid">Submit</button>
+</form>
+<button (click)="fillData()">Fill</button>

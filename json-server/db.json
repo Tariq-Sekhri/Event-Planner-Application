@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "name": "asd",
+      "date": "2025-04-21",
+      "location": "Test Location",
+      "description": "Test Description",
+      "completion_status": true,
+      "id": "1f12"
+    },
+    {
+      "id": "f202",
+      "name": "Test Event",
+      "date": "2025-04-26",
+      "location": "Test Location",
+      "description": "Test Description",
+      "completion_status": true
+    },
+    {
+      "id": "24b1",
+      "name": "Test aaa",
+      "date": "2025-05-07",
+      "location": "Test Location",
+      "description": "Test Description",
+      "completion_status": false
+    }
+  ]
+}
